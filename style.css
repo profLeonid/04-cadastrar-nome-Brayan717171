@@ -3,3 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: tomato;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 350px;
+}
