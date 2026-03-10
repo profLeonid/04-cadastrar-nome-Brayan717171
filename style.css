@@ -1,11 +1,91 @@
-*{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: tomato;
-    text-align: center;
-    box-sizing: border-box;
-    margin-top: 350px;
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #0f0f0f; /* Preto suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #eeeeee;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: #1a1a1a; /* Cinza escuro moderno */
+    padding: 32px;
+    border-radius: 12px;
+    gap: 16px;
+    border: 1px solid #2a2a2a;
+}
+
+h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.iptNome {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #262626;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.iptNome:focus {
+    border-color: #ff3333; /* Vermelho minimalista no foco */
+}
+
+.btnCadastro {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff3333; /* Vermelho vibrante mas limpo */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btnCadastro:hover {
+    opacity: 0.9;
+}
+
+.listaNomes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    background-color: #121212;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #262626;
+    gap: 8px;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+/* Scrollbar fina e discreta */
+.listaNomes::-webkit-scrollbar {
+    width: 4px;
+}
+
+.listaNomes::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
 }

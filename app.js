@@ -1,18 +1,29 @@
-
-
 'use strict'
 
-const cadastrar = document.getElementById('cadastrar')
+const recebeNome = document.getElementById('cadastrarNome')
 
-function cadastraNome () { 
-    
-    const nome = document.getElementById('nome')
-    const listaNomes = document.getElementById('lista-nome')
+function cadastrarNome() {
+    const nomeEntrada = document.getElementById('nomeEntrada')
+    const nomeExibicao = document.getElementById('nomeExibicao')
 
-    const itemNome = document.createElement ("p")
-    itemNome.textContent = nome.value 
+    // Verifica se o campo está vazio ou contém um número
+    if (nomeEntrada.value === '' || !isNaN(nomeEntrada.value)) {
+        alert('Por favor, insira um nome válido.')
+        nomeEntrada.value = '' // Limpa o campo de entrada
+        return console.error('Entrada inválida: O campo está vazio ou contém um número.') // Exibe um erro no console
+    }
 
-    listaNomes.appendChild(itemNome)
+    // Cria um novo elemento de parágrafo para exibir o nome
+    const itemNome = document.createElement('p')
+
+    // Define o conteúdo do texto como o valor do campo de entrada
+    itemNome.textContent = nomeEntrada.value
+
+    // Adiciona o nome ao elemento de exibição
+    nomeExibicao.appendChild(itemNome)
+
+    // Limpa o campo de entrada após adicionar o nome
+    nomeEntrada.value = ''
 }
 
-cadastrar.addEventListener('click', cadastraNome)
+recebeNome.addEventListener('click', cadastrarNome)
